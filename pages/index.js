@@ -1,7 +1,10 @@
 export default function HomePage() {
   return (
-    <div>
-      <h1>Hello from Next.js</h1>
-    </div>
+    <>
+      <header>Money Manager</header>
+      <main>
+        <h1>Your Transactions</h1>
+      </main>
+    </>
   );
 }
