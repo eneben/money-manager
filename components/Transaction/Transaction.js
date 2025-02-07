@@ -24,8 +24,6 @@ export default function Transaction({ transaction }) {
   );
 }
 
-//hallo hallo
-
 const StyledTransaction = styled.li``;
 const StyledTransactionDetailsList = styled.ul``;
 const StyledTransactionDetailsWrapper = styled.div``;
