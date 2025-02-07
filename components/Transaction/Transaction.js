@@ -11,7 +11,7 @@ export default function Transaction({ transaction }) {
     <li>
       <ul>
         <div>
-          <li>{date}</li>
+          <StyledDate>{date}</StyledDate>
           <li>{category}</li>
           <li>
             {type === "income" && "+"}
@@ -23,3 +23,5 @@ export default function Transaction({ transaction }) {
     </li>
   );
 }
+
+const StyledDate = styled.li``;
