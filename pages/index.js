@@ -15,5 +15,10 @@ export default function HomePage() {
   );
 }
 
-const StyledHeadline = styled.h2``;
-const StyledTransactionList = styled.ul``;
+const StyledHeadline = styled.h2`
+  text-align: center;
+  padding: 30px 0;
+`;
+const StyledTransactionList = styled.ul`
+  list-style: none;
+`;

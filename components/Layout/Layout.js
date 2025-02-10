@@ -14,7 +14,7 @@ export default function Layout({ children }) {
 
 const MainContainer = styled.main`
   margin: 0 auto;
-  padding: 100px 1rem 3rem;
+  padding: 100px 1.5rem 5rem;
   background-color: var(--background-color);
   min-height: 100vh;
 `;
@@ -27,7 +27,8 @@ const StyledHeader = styled.header`
   top: 0;
   width: 100vw;
   height: 100px;
-  background-color: var(--primary-dark);
+  background-color: var(--primary-light);
+  box-shadow: 0 0px 20px var(--primary-light);
 `;
 
 const StyledTopHeadline = styled.h1`

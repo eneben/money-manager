@@ -4,7 +4,8 @@
     "amount": -50.75,
     "category": "Groceries",
     "type": "expense",
-    "date": "2024-07-01T00:00:00"
+    "date": "2024-07-01T00:00:00",
+    "description": "Weekly groceries"
   },
   {
     "id": "2",
@@ -39,7 +40,8 @@
     "amount": -60.0,
     "category": "Restaurants",
     "type": "expense",
-    "date": "2024-07-06T00:00:00"
+    "date": "2024-07-06T00:00:00",
+    "description": "Dinner with friends"
   },
   {
     "id": "7",
