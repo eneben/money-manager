@@ -9,25 +9,26 @@ export default function Transaction({ transaction }) {
 
   return (
     <StyledTransaction>
-      <StyledTransactionDetailsList>
-        <StyledTransactionDetailsWrapper>
-          <StyledDate>{date}</StyledDate>
-          <StyledCategory>{category}</StyledCategory>
-          <StyledAmount>
-            {type === "income" && "+"}
-            {amount}
-          </StyledAmount>
-        </StyledTransactionDetailsWrapper>
-        {description && <StyledDescription>{description}</StyledDescription>}
-      </StyledTransactionDetailsList>
+      <StyledTransactionDetails>
+        <StyledDate>{date}</StyledDate>
+        <StyledCategory>{category}</StyledCategory>
+        <StyledAmount>
+          {type === "income" && "+"}
+          {amount}
+        </StyledAmount>
+      </StyledTransactionDetails>
+      {description && <StyledDescription>{description}</StyledDescription>}
     </StyledTransaction>
   );
 }
 
 const StyledTransaction = styled.li``;
-const StyledTransactionDetailsList = styled.ul``;
-const StyledTransactionDetailsWrapper = styled.div``;
+const StyledTransactionDetails = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+`;
 const StyledDate = styled.li``;
 const StyledCategory = styled.li``;
 const StyledAmount = styled.li``;
-const StyledDescription = styled.li``;
+const StyledDescription = styled.p``;
