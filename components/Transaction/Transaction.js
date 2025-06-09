@@ -7,27 +7,75 @@ export default function Transaction({ transaction }) {
 
   const { date, type, category, amount, description } = transaction;
 
+  const formattedDate = new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
   return (
-    <StyledTransaction>
-      <StyledTransactionDetailsList>
-        <StyledTransactionDetailsWrapper>
-          <StyledDate>{date}</StyledDate>
-          <StyledCategory>{category}</StyledCategory>
-          <StyledAmount>
-            {type === "income" && "+"}
-            {amount}
-          </StyledAmount>
-        </StyledTransactionDetailsWrapper>
-        {description && <StyledDescription>{description}</StyledDescription>}
-      </StyledTransactionDetailsList>
-    </StyledTransaction>
+    <TransactionWrapper>
+      <TransactionDetails>
+        <TransactionDate>{formattedDate}</TransactionDate>
+        <TransactionCategory>{category}</TransactionCategory>
+        <TransactionAmount $type={type}>
+          {type === "income" && "+"}
+          {amount}
+        </TransactionAmount>
+      </TransactionDetails>
+      {description && (
+        <TransactionDescription>{description}</TransactionDescription>
+      )}
+    </TransactionWrapper>
   );
 }
 
-const StyledTransaction = styled.li``;
-const StyledTransactionDetailsList = styled.ul``;
-const StyledTransactionDetailsWrapper = styled.div``;
-const StyledDate = styled.li``;
-const StyledCategory = styled.li``;
-const StyledAmount = styled.li``;
-const StyledDescription = styled.li``;
+const TransactionWrapper = styled.li`
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-dark);
+    filter: blur(1px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+`;
+
+const TransactionDetails = styled.article`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  width: 100%;
+`;
+
+const TransactionDate = styled.time`
+  text-align: left;
+`;
+
+const TransactionCategory = styled.h3`
+  text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+`;
+
+const TransactionAmount = styled.span`
+  text-align: right;
+  font-weight: bold;
+  color: ${({ $type }) =>
+    $type === "income" ? "var(--color-income)" : "var(--color-expense)"};
+`;
+
+const TransactionDescription = styled.p`
+  padding-bottom: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--primary-dark);
+`;

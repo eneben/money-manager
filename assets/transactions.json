@@ -4,7 +4,8 @@
     "amount": -50.75,
     "category": "Groceries",
     "type": "expense",
-    "date": "2024-07-01T00:00:00"
+    "date": "2024-07-01T00:00:00",
+    "description": "Weekly groceries"
   },
   {
     "id": "2",
@@ -39,7 +40,8 @@
     "amount": -60.0,
     "category": "Restaurants",
     "type": "expense",
-    "date": "2024-07-06T00:00:00"
+    "date": "2024-07-06T00:00:00",
+    "description": "Dinner with friends"
   },
   {
     "id": "7",
@@ -64,6 +66,78 @@
   },
   {
     "id": "10",
+    "amount": 200.0,
+    "category": "Savings",
+    "type": "income",
+    "date": "2024-07-10T00:00:00"
+  },
+  {
+    "id": "11",
+    "amount": -50.75,
+    "category": "Groceries",
+    "type": "expense",
+    "date": "2024-07-01T00:00:00",
+    "description": "Weekly groceries"
+  },
+  {
+    "id": "12",
+    "amount": -1200.0,
+    "category": "Rent",
+    "type": "expense",
+    "date": "2024-07-02T00:00:00"
+  },
+  {
+    "id": "13",
+    "amount": 1500.0,
+    "category": "Salary",
+    "type": "income",
+    "date": "2024-07-03T00:00:00"
+  },
+  {
+    "id": "14",
+    "amount": -200.5,
+    "category": "Insurance",
+    "type": "expense",
+    "date": "2024-07-04T00:00:00"
+  },
+  {
+    "id": "15",
+    "amount": -75.25,
+    "category": "Entertainment",
+    "type": "expense",
+    "date": "2024-07-05T00:00:00"
+  },
+  {
+    "id": "16",
+    "amount": -60.0,
+    "category": "Restaurants",
+    "type": "expense",
+    "date": "2024-07-06T00:00:00",
+    "description": "Dinner with friends"
+  },
+  {
+    "id": "17",
+    "amount": 500.0,
+    "category": "Investment",
+    "type": "income",
+    "date": "2024-07-07T00:00:00"
+  },
+  {
+    "id": "18",
+    "amount": -30.0,
+    "category": "Transportation",
+    "type": "expense",
+    "date": "2024-07-08T00:00:00"
+  },
+  {
+    "id": "19",
+    "amount": -100.0,
+    "category": "Education",
+    "type": "expense",
+    "date": "2024-07-09T00:00:00"
+  },
+  {
+    "id": "20",
     "amount": 200.0,
     "category": "Savings",
     "type": "income",
