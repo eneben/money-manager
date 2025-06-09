@@ -32,7 +32,20 @@ export default function Transaction({ transaction }) {
 
 const TransactionWrapper = styled.li`
   width: 100%;
-  box-shadow: 0 3px 3px -3px var(--primary-dark);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-dark);
+    filter: blur(1px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
 `;
 
 const TransactionDetails = styled.article`
