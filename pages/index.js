@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import transactions from "@/assets/transactions.json";
 import Transaction from "@/components/Transaction/Transaction";
+import Link from "next/link";
+import AddIcon from "@/public/icons/Add.svg";
 
 export default function HomePage() {
   return (
@@ -11,17 +13,9 @@ export default function HomePage() {
           return <Transaction key={transaction.id} transaction={transaction} />;
         })}
       </StyledTransactionList>
-      <StyledLink>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="36px"
-          viewBox="0 -960 960 960"
-          width="36px"
-          fill="var(--background-color)"
-        >
-          <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
-        </svg>
-      </StyledLink>
+      <StyledAddLink href="/">
+        <StyledAddIcon />
+      </StyledAddLink>
     </>
   );
 }
@@ -34,12 +28,12 @@ const StyledTransactionList = styled.ul`
   list-style: none;
 `;
 
-const StyledLink = styled.a`
+const StyledAddLink = styled(Link)`
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: var(--primary-light);
   color: var(--background-color);
   border: 1px solid var(--background-color);
@@ -47,4 +41,20 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  :hover,
+  :active {
+    background-color: var(--highlight-light);
+    border: 1px solid var(--highlight-dark);
+    color: var(--highlight-dark);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+`;
+
+const StyledAddIcon = styled(AddIcon)`
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
 `;
