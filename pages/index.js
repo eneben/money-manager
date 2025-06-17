@@ -13,12 +13,18 @@ export default function HomePage() {
           return <Transaction key={transaction.id} transaction={transaction} />;
         })}
       </StyledTransactionList>
-      <StyledAddLink href="/form">
+      <StyledAddLink href="/">
         <StyledAddIcon />
       </StyledAddLink>
     </>
   );
 }
+
+// to do:
+// [] hovern über button fixen (größe ändert sich)
+// [] active in mobile view funktioniert nicht
+// [] form hinzufügen
+// [] form component als modal (dann auch nicht mehr button als link)
 
 const StyledHeadline = styled.h2`
   text-align: center;
