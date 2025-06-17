@@ -13,8 +13,8 @@ export default createGlobalStyle`
     --background-color: #031626;
     --primary-light: #05c7f2;
     --primary-dark: #049dd9;
-    --highlight-light: #f18df2;
-    --highlight-dark: #582259;
+    --highlight-light: #E600FF;
+    --highlight-dark: #7A00A3;
     --color-expense: #F5365C;
     --color-income: #2DCE89;
   }
