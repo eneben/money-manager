@@ -13,7 +13,7 @@ export default function HomePage() {
           return <Transaction key={transaction.id} transaction={transaction} />;
         })}
       </StyledTransactionList>
-      <StyledAddLink href="/">
+      <StyledAddLink href="/form">
         <StyledAddIcon />
       </StyledAddLink>
     </>
@@ -47,8 +47,8 @@ const StyledAddLink = styled(Link)`
     background-color: var(--highlight-light);
     border: 1px solid var(--highlight-dark);
     color: var(--highlight-dark);
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
   }
 `;
